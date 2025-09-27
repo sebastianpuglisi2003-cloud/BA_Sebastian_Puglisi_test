@@ -1,0 +1,75 @@
+\documentclass[
+paper=a4,
+12pt,
+twoside=off,
+bibliography=totoc,
+listof=totoc,
+appendixprefix,
+headings=small]{scrbook} 
+
+\usepackage[
+paper=a4paper,
+left=15mm,
+right=25mm,
+top=25mm,
+bottom=25mm,
+bindingoffset=10mm]{geometry}
+\usepackage{scrhack}
+
+\usepackage[utf8]{inputenc}
+\usepackage[greek,english]{babel}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} % base font is to be sans serif
+\usepackage[T1]{fontenc}
+\usepackage{microtype} % für die Mikrotypografie (besseres Schriftbild)
+
+\usepackage{url} % URL's formatieren (z.B. in Literatur) 
+\usepackage[hidelinks]{hyperref} % für Hyperlinks in PDF-Dokumenten
+
+\usepackage{longtable}
+\usepackage{multicol, multirow}
+
+\usepackage{cellspace}
+\setlength{\tabcolsep}{12pt} %gap between text and border
+\renewcommand{\arraystretch}{1.2} %height of cells
+\setlength{\arrayrulewidth}{1pt}
+
+
+
+\begin{document}
+
+bbbbbbbb
+
+
+\begin{longtable}[]{|m{1.5cm}|m{3.6cm}m{5cm}m{2.2cm}|}
+    \caption{Composition of Buffers used in this thesis}
+    \label{tab:buffers_used}
+    \\
+
+    \hline
+        \textbf{Name} & \multicolumn{3}{c|}{\textbf{Components}} \\
+    \hline
+    \endfirsthead
+
+    \multirow{4}{4em}{\textbf{Elution Buffer}} 
+        & 20 mM & N-2-hydroxyethylpiperazine-N'-2-ethane sulphonic acid & by neoFroxx \\
+        & 50/100/250/500 mM & imidazole & by Thermo Scientific \\
+        & 300 mM & sodium chloride & by neoFroxx \\
+        & \multicolumn{3}{c|}{pH adjusted to 8.0} \\    
+    \hline
+    
+    \multirow{4}{4em}{\textbf{Elution Buffer}} 
+        & 20 mM & 4-(2-Hydroxyethyl)piperazine-1-ethanesulfonic acid & by neoFroxx \\
+        & 50/100/250/500 mM & imidazole & by Thermo Scientific \\
+        & 300 mM & sodium chloride & by neoFroxx \\
+        & \multicolumn{3}{c|}{pH adjusted to 8.0} \\    
+    \hline
+    
+\end{longtable}
+
+
+\end{document}

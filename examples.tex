@@ -1,0 +1,140 @@
+%this serves to save templates
+
+festgestelltes leerzeichen ist  ~   sehr nützlich
+\label{} zum labeln halt
+\ref{} für 1 label
+\labelcref{} für mehrere labels
+\gls{} UND  \Gls{}  UND  \glsxtrshort{} UND \glsxtrlong{}
+
+braucht bib.tex (Zotero verknüpfung oder von Zotero runterladen)
+\parencite{} für klammern
+\cite{} ohne klammern
+%%%%%%%%%%%%%%%%%%%%% Tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Table ------------------------------------------------------------
+\begin{table}[H]
+        \caption{Antibiotic solutions used in this work}
+        \label{tab:antibiotic_sol}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{4.8cm}|Y{3cm}|Y{6cm}|}
+            \hline
+                \textbf{Antibiotic} &  \textbf{Company} & \textbf{End concentration [µg/ml]} \\ 
+            \hline
+                \textbf{\Glsxtrfull{amp}} & Carl Roth  & 100 \\
+                \textbf{\Glsxtrfull{cm}} & Carl Roth  & 25 \\ 
+                \textbf{\Glsxtrfull{hyg}} & Invivogen  & 500  \\ 
+                \textbf{\Glsxtrfull{neo}} & Sigma-Aldrich & 500 \\
+            \hline
+        \end{tabular}
+    \end{table}
+%-----------------------------------------------------------------------------
+% three-part Table ------------------------------------------------------------
+\begin{table}[H]
+        \caption{Software used in this work}
+        \label{tab:software_list}
+        \rowcolors{2}{}{mygray!40}
+\begin{threeparttable}
+        \begin{tabular}{|L{2.2cm}|L{12.4cm}|}
+            \hline
+                \textbf{Utility} &  \textbf{Software} \hfill url and date of last accession \\ 
+            \hline                             
+            \textbf{Homology search} & BLASTP (NCBI)  \hfill
+            \begin{small}\url{https://blast.ncbi.nlm.nih.gov/Blast.cgi} \space 28.08.25\end{small} \par
+                                       Phyre2.2\textbf{\tnote{a}} \hfill 
+            \begin{small}\url{https://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi} \space 28.08.25\end{small} \\
+            \textbf{In-silico cloning} &    Benchling \hfill 
+            \begin{small}\url{https://benchling.com/editor} \space 25.08.25\end{small}\par
+                                            SnapGene (Dotmatics) \\
+            \textbf{Properties of proteins} & ProtParam\textbf{\tnote{b}} \hfill
+            \begin{small}\url{https://web.expasy.org/protparam} 28.08.25\end{small} \par
+                                            HeliQuest\textbf{\tnote{c}} \hfill 
+            \begin{small}\url{https://heliquest.ipmc.cnrs.fr/index.html} \space 28.08.25\end{small}\\
+            \textbf{Signal peptide prediction} & DeepLoc2.1\textbf{\tnote{d}} \hfill 
+            \begin{small}\url{https://services.healthtech.dtu.dk/services/DeepLoc-2.1} \space 28.08.25\end{small} \par
+                                                 SignalP6.0\textbf{\tnote{e}} \hfill
+            \begin{small}\url{https://services.healthtech.dtu.dk/services/SignalP-6.0} \space 28.08.25\end{small} \par
+                                                 TargetP2.0\textbf{\tnote{f}}  \hfill
+            \begin{small}\url{https://services.healthtech.dtu.dk/services/TargetP-2.0} \space 28.08.25\end{small}  \\
+            \textbf{Structure prediction} & Alphafold3\textbf{\tnote{g}} \space (Google DeepMind) \hfill
+            \begin{small}\url{https://alphafoldserver.com} \space 28.08.25\end{small} \\
+            \textbf{Image processing} & Leica X, OMERO, ZenBluev2.5 \& ZEN lite (Zeiss)\par
+                                        PyMol (Schrödinger)  \\
+            \hline
+        \end{tabular}  
+    \begin{tablenotes}\small 
+    \item[a] \cite{powell_phyre22_2025}
+    \item[b] \cite{walker_protein_2005} 
+    \item[c] \cite{gautier_heliquest_2008} 
+    \item[d] \cite{odum_deeploc_2024}
+    \item[e] \cite{teufel_signalp_2022}
+    \item[f] \cite{armenteros_detecting_2019}
+    \item[g] \cite{abramson_accurate_2024}
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
+%-----------------------------------------------------------------------------
+% long Table ------------------------------------------------------------
+\begin{longtable}{|L{4.6cm}|L{10cm}|}
+    \caption{Equipment used in this work}
+    \label{tab:Equipment_list}
+    \\
+        \hline
+        \textbf{Utility} &  \textbf{Device (Company)} \\ 
+        \hline
+    \endfirsthead
+        \multicolumn{2}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} -- continued from previous page} \\
+        \hline 
+        \textbf{Utility} &  \textbf{Device (Company)} \\ 
+        \hline
+    \endhead
+        \hline
+        \multicolumn{2}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+\SetRowColor{mygray!40}  \textbf{Blotting device} & SNAP i.d. 2.0 Protein Detection System (Merck Millipore) \\
+                        \textbf{Blotting membrane} & Amersham Hybond P 0.45 µm PVDF (Cytiva) \\
+\SetRowColor{mygray!40} \textbf{Blotting paper} & Whatman Grade GB003 Blotting Paper (Cytiva) \\
+                        \textbf{Blotting transfer system} & Trans-Blot Turbo Transfer System (Bio-Rad Laboratories) \\
+\SetRowColor{mygray!40} \textbf{Cell counter} & Multisizer 4e (Beckman Coulter) \\
+                        \textbf{Centrifuge} & Z 32 HK centrifuge (Hermle)  
+                                         \par Heraeus Fresco 21 centrifuge (Thermo Fisher Scientific)\\
+\SetRowColor{mygray!40} \textbf{Cryostock} & Mr. Frosty freezing container (Thermo Fisher Scientific) \\
+                        \textbf{Electrophoresis} & nanoPAC-300P (Cleaver scientific Ltd) \\
+\SetRowColor{mygray!40} \textbf{Electroporation} & Nucelofactor 4D (Lonza) \\                
+                        \textbf{Fluorescent mircroscope} & confocal: TCS SP8 STED 3X (Leica) 
+                                                        \par epi-: Axio Imager 2 (Carl Zeiss AG)\\
+\SetRowColor{mygray!40} \textbf{Heatblock} & TSC ThermoShaker (Biometra) 
+                                         \par Bio TDB-100 (Biosan)\\
+                        \textbf{Imaging system} & Chemidoc MP (Bio-Rad Laboratories) \\            
+\SetRowColor{mygray!40} \textbf{Incubator} & for \glsxtrshort{Adea}: KT53 and BD56 (Binder) 
+                                           \par for \glsxtrshort{Eco}: Ecotron (Infors HT) \\
+                        \textbf{Lightning unit} & Illuminator HXP 120 V (Zeiss) \\
+\SetRowColor{mygray!40}  \textbf{\Gls{PAGE}} & Mini-PROTEAN Tetra Cell (Bio-Rad Laboratories) 
+                                             \par Standard Power Pack P25 T (Analytik Jena) \\
+                         \textbf{PCR cycler} & Labcycler (SensoQuest GmbH) \\
+\SetRowColor{mygray!40}  \textbf{Protein concentration} & FLUOstar Omega Plate Reader (BMG LABTECH) \\
+                        \textbf{Pump} & Chemical Duty Vacuum Pressure Pump (Merck Millipore) \\
+\SetRowColor{mygray!40}  \textbf{Sonicator} & UP50H Ultrasonic Processor (Hielscher ultrasound technology) \\	
+                         \textbf{UV-Vis Spectroscopy} & NanoPhotometer NP80 (Implen GmbH) \\
+\end{longtable}
+%-----------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%% Tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=11cm]{"SUP4.2.1_TestWestern_PyrE"}
+\caption{
+\textbf{Western blot analysis of the test expression of EC174 in different growth conditions}. 
+    EC174 expressed \gls{his}-tagged \gls{utp_E}. Western blot of the corresponding \gls{page} (see Figures~\ref{fig:Test_SDS_E}). Proteins were detected with \textgreek{α}-\gls{his} antibody; prestained PageRuler (L). Strains were grown in
+    (A) \gls{lb} and (B) \gls{2yt} medium.}
+       \label{sup:Test_WB_E}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%% Figure %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%-------------------------------------------------------------------
+    
+

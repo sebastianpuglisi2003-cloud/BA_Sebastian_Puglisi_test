@@ -1,0 +1,578 @@
+\section{Materials}
+%%%%%%%%%%%%%%%%%%%%%%%%%% SEQ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{UCYN-A transit peptide sequences}
+The protein sequences were taken from \cite{coale_nitrogen-fixing_2024} datasets available in the Dryad database. From this dataset, three proteins were selected for investigation, and only the C-terminal regions of these chosen protein sequences, the \gls{utp}s, are analyzed (see Table \ref{tab:uTP_seq_used}). 
+
+\begin{table}[H]
+        \caption{\textbf{\glsxtrlong{utp} sequences studied in this work}}
+        \label{tab:uTP_seq_used}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{5cm}|L{9.6cm}|}
+            \hline
+                \textbf{Name} (Accession number) & \textbf{Sequence} \\ 
+            \hline
+                {\textbf{\gls{utp_B}}  \vspace{1mm} \par 
+                KC1-P2-N\_k69\_Locus\_ 12832\_Transcript\_2\_1} &  \vspace{1mm}
+                \texttt{GPCASAAAWH AEWERRLGCW WLALPGATRS SFGGCAGALG LHLASRFEAL WSGGGAPSAA GAQPAAEPGC GWVRAEGALQ LPSFPELGTL EFELPPVPRL LRGWQQLQSR GVAPGQTAAA ATGASAGAKR REQAWAPVAG AGLAGFAVAG ALVLLLAAGR RVAGRHVVAA ARGGHTRSGE RRGCAAIDKN}  \vspace{1mm}\\
+                \textbf{\gls{utp_E}} \vspace{1mm} \par
+                KC1-P2\_N3\_k65\_Locus\_ 4778\_Transcript\_3\_1 & \vspace{1mm}
+                \texttt{ATASSQDAWL SAWRESLECW WIGLPLPTQT QLGSCMGALG         
+                        VSLASSLDAS WRAARGTLGA PPVAEPLASG CEWVGDRQTL RLPEFPSFPS EFSLPPIPRL LPSWQHLQGL AEHRQAVLAL
+                        SMPQRMHTQQ EATPAQATSA VAGAGAGALA AVLVLGLLSL
+                        GRRRSHRKSE GSRSNAQAAH RADTSTKEAN SSAGGDV} \vspace{1mm}\\ 
+                \textbf{\gls{utp_C}} \vspace{1mm} \par
+                KC1-P2-N\_CL7819Contig1\_1 & \vspace{1mm}
+                \texttt{GAAEEERAWF DEWGERIQCW WLATPHRPQL QACIGALGLH 
+                        LSQRLESAWR MAQPQRAAAA PPQGAAEPGC EWVAEAGGAN LQLPEFPDLT NFRFTMPPIP RLLPSYGQLQ SSVPGPQHSS
+                        VPWPQQLPRL RRAEGESYES WAPVAAGAGA GFAAAVTALA
+                        VLGLARRERG GDNGGDGRTT ATAGRMQVRR APAGQGPAKG ASI} \vspace{1mm}\\ 
+            \hline
+        \end{tabular}
+    \end{table}
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% PRIMERS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Primers}
+Sigma-Aldrich synthesized all oligonucleotides (primers).
+\begin{longtable}{|Y{1.7cm}|Y{1.7cm}|L{10.5cm}|}
+    \caption{\textbf{\Gls{fwd} and \gls{rev} primers used in this work.}}
+    \label{tab:primer_list}
+    \\
+        \hline
+        \textbf{ID} & \textbf{Direction} & \textbf{Sequence 5$^\prime$ to 3$^\prime$}  \\
+        \hline
+    \endfirsthead
+        \multicolumn{3}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} --- continued from previous page} \\
+        \hline 
+        \textbf{ID} & \textbf{Direction} & \textbf{Sequence 5$^\prime$ to 3$^\prime$}   \\
+        \hline
+    \endhead
+        \hline
+        \multicolumn{3}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+        
+\SetRowColor{mygray!40} 
+\textbf{49} & \gls{fwd} &   \texttt{ACTCCTCCACCACTACCACC} \\  
+
+\textbf{545} & \gls{rev} &  \texttt{CTCCCTAAGCGCCAATATCA} \\
+
+\SetRowColor{mygray!40} 
+\textbf{572} & \gls{rev} & \texttt{gaggttctcccctctttatttcct} \\  
+
+\textbf{1440} & \gls{fwd} & \texttt{CGCCGAGGTGAAGTTCGAGGGC} \\
+
+\SetRowColor{mygray!40} 
+\textbf{1441} & \gls{rev} & \texttt{CCTCCTTGAAGTCGATGCCC} \\  
+
+\textbf{3363} & \gls{fwd} & \texttt{CTACGGGGTCTGACGCTCAGTGGAAC} \\
+\SetRowColor{mygray!40} 
+\textbf{3364} & \gls{rev} & \texttt{GTTCCACTGAGCGTCAGACCCCGTAG} \\
+
+\textbf{3415} & \gls{fwd} & \texttt{TCTCGGCATGGACGAGCTGTACAAGGGTCCGTGCGCGAGCG} \\
+\SetRowColor{mygray!40} 
+\textbf{3416} & \gls{rev} & \texttt{cactcacgtctctctcccccctcttTTAGTTTTTGTCGATCGCCGC} \\  
+\textbf{3417} & \gls{fwd} & \texttt{TTGCGCGGCGATCGACAAAAACTAAaagaggggggagagagacg} \\
+\SetRowColor{mygray!40} 
+\textbf{3418} & \gls{rev} & \texttt{ACGCCGCCGCGCTCGCGCACGGACCCTTGTACAGCTCGTCCATGC} \\ 
+
+\textbf{3419} & \gls{fwd} & \texttt{TCTCGGCATGGACGAGCTGTACAAGGCGACCGCGAGCAGCCAAG} \\
+\SetRowColor{mygray!40}     
+\textbf{3420} & \gls{rev} & \texttt{cactcacgtctctctcccccctcttTTAAACATCGCCACCCGC} \\  
+\textbf{3421} & \gls{fwd} & \texttt{CAGCAGCGCGGGTGGCGATGTTTAAaagaggggggagagagacgtgag} \\
+\SetRowColor{mygray!40} 
+\textbf{3422} & \gls{rev} & \texttt{ACGCATCTTGGCTGCTCGCGGTCGCCTTGTACAGCTCGTCCATGCC} \\
+
+\textbf{3423} & \gls{fwd} & \texttt{TCTCGGCATGGACGAGCTGTACAAGGGTGCGGCGGAGGAAGAG} \\
+\SetRowColor{mygray!40} 
+\textbf{3424} & \gls{rev} & \texttt{cactcacgtctctctcccccctcttTTAAATGCTCGCACCCTTCGC} \\  
+\textbf{3425} & \gls{fwd} & \texttt{TCCGGCGAAGGGTGCGAGCATTTAAaagaggggggagagagacg} \\
+\SetRowColor{mygray!40} 
+\textbf{3426} & \gls{rev} & \texttt{ACGCACGCTCTTCCTCCGCCGCACCCTTGTACAGCTCGTCCATGC} \\
+\end{longtable}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plasmid %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Plasmids}
+GeneScript synthesized GPN308 to GPN310 based on the amino acid sequences of the \gls{utp}s. 
+\begin{longtable}{|Y{1.6cm}|Y{2cm}|Y{6.2cm}|Y{3.4cm}|}
+    \caption{\textbf{Plasmids used in this work}}
+    \label{tab:plasmid_list}
+    \\
+        \hline
+        \textbf{ID} & \textbf{Backbone} & \textbf{Description} & \textbf{Reference} \\
+        \hline
+    \endfirsthead
+        \multicolumn{4}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} --- continued from previous page} \\
+        \hline 
+        \textbf{ID} & \textbf{Backbone} & \textbf{Description} & \textbf{Reference} \\
+        \hline
+    \endhead
+        \hline
+        \multicolumn{4}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+
+\SetRowColor{mygray!40} GPN308  &  pUC57 & for amplifying \emph{utp\textsubscript{pfkB}} & GeneScript  \\
+                GPN309 &  pUC57 &  for amplifying \emph{utp\textsubscript{pyrE}} & GeneScript  \\
+\SetRowColor{mygray!40} GPN310 &  pUC57 & for amplifying \emph{utp\textsubscript{thrC}} & GeneScript  \\
+                GPN326  &  pET22b & IPTG inducible expression of 6xHis-SUMO-TEV-3x(GS)-\glsxtrshort{utp_C} &  Klimenko, V. \\
+\SetRowColor{mygray!40} GPN327  &  pET22b & IPTG inducible expression of 6xHis-SUMO-TEV-3x(GS)-\glsxtrshort{utp_E} &  Klimenko, V.  \\
+                pAdea301 &  pAdea043 & \textgreek{δ}-ama 5$^\prime$-FR, \emph{neo\textsuperscript{R}}, GAPDH IR, \emph{egfp-t7rnap}, \textgreek{δ}-ama 3$^\prime$-FR &  Kröninger, L.  \\
+\SetRowColor{mygray!40} pAdea481 & pAdea301 &  replaced \emph{t7rnap} with \emph{utp\textsubscript{pfkB}} & Puglisi, S. (this work)  \\
+                pAdea482 & pAdea301 &  replaced \emph{t7rnap} with \emph{utp\textsubscript{pyrE}} & Puglisi, S. (this work)  \\
+\SetRowColor{mygray!40} pAdea483 & pAdea301 &  replaced \emph{t7rnap} with \emph{utp\textsubscript{thrC}} & Puglisi, S. (this work)  \\
+\end{longtable}    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Organisms %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Organisms and strains used in this work}
+ %--------------------------------Organisms--------------------------------------------
+\glsxtrshort{Adea} PRA-265 will be referred to as \gls{WT} throughout this work.
+\begin{table}[H]
+        \caption{\textbf{Organisms used in this work}}
+        \label{tab:organism_list}
+        \rowcolors{2}{}{mygray!40}
+\begin{threeparttable}
+        \begin{tabular}{|Y{3.9cm}|Y{4cm}|Y{6cm}|}
+            \hline
+                \textbf{Organism} & \textbf{Strain} & \textbf{obtained by} \\  
+            \hline
+                \textbf{\Glsxtrlong{Adea}} 
+                    &  PRA-265 (\gls{WT}) &  American Type Culture Collection \\
+                    &  DH5\textgreek{α}  & AG Kutsch \\
+            \cellcolor{white}  & LOBSTR (DE3)\tnote{\textbf{a}}  & AG Feldbrügge \\
+            \multirow{-3}{*}{\textbf{\Glsxtrlong{Eco}}} & TOP10 & Thermo Fisher Scientific  \\
+                
+            \hline
+        \end{tabular}
+\begin{tablenotes}
+\item[a] \cite{andersen_optimized_2013}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{table}
+%--------------------------------Ec0 strains--------------------------------------------
+\begin{table}[H]
+        \caption{\textbf{Generated \glsxtrshort{Eco} strains used in this work}}
+        \label{tab:Eco_list}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{1.6cm}|Y{3cm}|Y{5.5cm}|Y{3cm}|}
+            \hline
+                \textbf{ID} & \textbf{Recipient strain} & \textbf{Plasmid used for transformation} & \textbf{Reference} \\  
+            \hline
+                EC173 & LOBSTR (DE3) & GPN326 & Klimenko, V. \\
+                EC174 & LOBSTR (DE3) & GPN327 & Klimenko, V. \\
+            \hline
+        \end{tabular}
+    \end{table}
+%--------------------------------Adea strains--------------------------------------------
+\begin{table}[H]
+        \caption{\textbf{Generated \glsxtrshort{Adea} strains used in this work}}
+        \label{tab:Adea_list}
+        \rowcolors{2}{}{mygray!40}
+            \begin{tabular}{|Y{1.5cm}|Y{1.9cm}|Y{5.8cm}|Y{4cm}|}
+            \hline
+                \textbf{ID} & \textbf{Recipient cell line} & \textbf{Transferred sequence} & \textbf{Reference} \\  
+            \hline
+                Adea126 
+                & \gls{WT}
+                & \textgreek{γ}-ama 5$^\prime$-FR, \emph{hyg\textsuperscript{R}}, GAPDH IR, \emph{msc-etp1}, \textgreek{γ}-ama 3$^\prime$-FR
+                & Zanini, D. \par \parencite{morales_host-symbiont_2023} \\
+                Adea304 
+                & \gls{WT} 
+                & \textgreek{γ}-ama 5$^\prime$-FR, \emph{neo\textsuperscript{R}}, GAPDH IR, \emph{egfp}, \textgreek{γ}-ama 3$^\prime$-FR
+                & Kröninger, L.  \\
+                Adea538 
+                & Adea126 
+                & \textgreek{δ}-ama 5$^\prime$-FR, \emph{neo\textsuperscript{R}}, GAPDH IR, \emph{egfp-utp\textsubscript{pfkB}}, \textgreek{δ}-ama 3$^\prime$-FR
+                & Puglisi, S. (this work)  \\
+                Adea539 
+                & Adea126 
+                & \textgreek{δ}-ama 5$^\prime$-FR, \emph{neo\textsuperscript{R}}, GAPDH IR, \emph{egfp-utp\textsubscript{pyrE}}, \textgreek{δ}-ama 3$^\prime$-FR
+                & Puglisi, S.  (this work)  \\
+            \hline
+        \end{tabular}
+\end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%% BUffers, Chems, Media, Kits, Enzymes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Buffers, chemicals, enzymes, media, and other solutions}
+%---------------------------------MEDIA----------------------------------    
+\begin{table}[H]
+        \caption{\textbf{Media composition and usage}}
+        \label{tab:media_composition}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{5.6cm}|L{9cm}|}
+          \hline
+           \textbf{Media}   & \textbf{Components} (Company)  \\ 
+            \hline
+            \textbf{\Gls{bhi}}     
+                & \vspace{2mm}
+                37 g/l \Glsxtrshort{bhi} powder  (Sigma-Aldrich)     \par \vspace{2mm}
+                10 µg/ml  hemin (Sigma-Aldrich)                     \par \vspace{2mm}
+                10 \% (w/v) horse serum (Sigma-Aldrich) if needed \vspace{2mm} \\
+           
+           \textbf{\Gls{lb}} \par \parencite{bertani_studies_1951}    
+                &\vspace{2mm}
+                10 g/l tryptone  (Carl Roth)              \par \vspace{2mm}
+                5 g/l yeast extract  (Carl Roth)          \par \vspace{2mm}
+                5 g/l sodium chloride  (neoFroxx)         \par \vspace{2mm}
+                2 \% (w/v) agar for plates  (Carl Roth)         \vspace{2mm}\\ 
+        
+           \textbf{\gls{2yt}}    
+                & \vspace{2mm}
+                 16 g/l tryptone  (Carl Roth)              \par \vspace{2mm}
+                 10 g/l yeast extract  (Carl Roth)         \par \vspace{2mm}
+                 5 g/l sodium chloride  (neoFroxx)              \vspace{2mm} \\      
+            \hline
+        \end{tabular}
+\end{table}
+%-----------------------------ANTIBIOTICS----------------------------------
+\begin{table}[H]
+        \caption{\textbf{Antibiotic solutions used in this work}}
+        \label{tab:antibiotic_sol}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{4.8cm}|Y{3cm}|Y{6cm}|}
+            \hline
+                \textbf{Antibiotic} &  \textbf{Company} & \textbf{End concentration [µg/ml]} \\ 
+            \hline
+                \textbf{\Gls{amp}} & Carl Roth  & 100 \\
+                \textbf{\Gls{cm}} & Carl Roth  & 25 \\ 
+                \textbf{\Gls{hyg}} & Invivogen  & 500  \\ 
+                \textbf{\Gls{neo}} & Sigma-Aldrich & 500 \\
+            \hline
+        \end{tabular}
+    \end{table}
+%---------------------------------Antibodies----------------------------------
+\begin{table}[H]
+        \caption{\textbf{Antibody solutions used in this work}. All antibodies were diluted in blocking solution.}
+        \label{tab:antibody_list}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{4.2cm}|Y{4.5 cm}|Y{5.2cm}|}
+            \hline
+                \textbf{Antibody} (host) 
+                    &  \textbf{Company} \par \textbf{(catalouge number)} 
+                    & \textbf{Concentration [µg/ml]} \par \textbf{(Dilution for Western blot)} \\ 
+            \hline
+                \textbf{\textgreek{α}-GFP} (mouse) & Santa Cruz Biotechnology (sc-9996) & 200 \quad (1:1,000) \\
+                \textbf{\textgreek{α}-\gls{6xhis}} (mouse) & Sigma Aldrich (H1029) & 200 \quad (1:5,000) \\
+                \textbf{\textgreek{α}-His-HRP} (mouse) & Santa Cruz Biotechnology (sc-8036) & 200 \quad (1:5,000) \\
+                \textbf{\textgreek{α}-mouse-HRP} (goat) & Thermo Scientific (31430) & 400 \quad (1:10,000) \\
+            \hline
+        \end{tabular} 
+    \end{table}
+%---------------------------------ENZYMES---------------------------------
+\begin{table}[H]
+        \caption{\textbf{Enzymes used in this work}}
+        \label{tab:enzyme_list}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{7.3cm}|Y{7.3cm}|}
+            \hline
+                \textbf{Name} &  \textbf{Company}  \\ 
+            \hline
+                \textbf{EcoRV-HF} & New England Biolabs\\
+                \textbf{DNase I} & Merck Millipore\\
+                \textbf{GoTaq DNA Polymerase} & Promega\\
+                \textbf{Phusion HF DNA-Polymerase} & New England Biolabs\\
+                \textbf{T5 Exonuclease} & New England Biolabs\\
+                \textbf{Taq DNA Ligase} & New England Biolabs\\
+            \hline
+        \end{tabular}   
+\end{table}
+%---------------------------------BUFFER----------------------------------
+\begin{longtable}{|Y{3.9cm}|m{10.7cm}|}
+    \caption{\textbf{Composition of buffers and solutions used in this work}}
+    \label{tab:buffers_used}
+    \\
+        \hline
+        \textbf{Name} & \textbf{Components} (Company) \\
+        \hline
+    \endfirsthead
+        \multicolumn{2}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} --- continued from previous page} \\
+        \hline 
+        \textbf{Name} & \textbf{Components} (Company) \\
+        \hline
+    \endhead
+        \hline
+        \multicolumn{2}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+        
+\SetRowColor{mygray!40}
+\textbf{Betaine stock} & \vspace{2mm}
+                5 M Betaine powder   (Sigma-Aldrich)              \par \vspace{2mm}
+                dissolved in \gls{dH2O}                     \vspace{2mm} \\
+
+\textbf{Blocking solution}  &\vspace{2mm}
+                5 \% (w/v) Milk powder   (Carl Roth)              \par \vspace{2mm}
+                dissolved in 1x \gls{PBS}                          \vspace{2mm} \\
+
+\SetRowColor{mygray!40}
+\textbf{Elution buffer} & \vspace{2mm} 
+            20 mM               \gls{HEPES}         (neoFroxx)           \par \vspace{2mm} 
+            50/100/250/500 mM   imidazole           (Thermo Scientific)  \par \vspace{2mm}
+            300 mM              sodium chloride     (neoFroxx) \par \vspace{2mm}
+            pH adjusted to 8.0 \vspace{2mm} \\  
+    
+\textbf{Friendly buffer} & \vspace{2mm}
+            92 mM           glycine              (Sigma-Aldrich)    \par \vspace{2mm} 
+            10 \% (w/v)     isopropanol           (Fisher Chemical)  \par \vspace{2mm} 
+            25 mM          \gls{tris}            (Sigma-Aldrich)    \par \vspace{2mm}
+            pH adjusted to 8.0 \vspace{2mm}\\    
+
+\SetRowColor{mygray!40}
+\textbf{Holy urea buffer} & \vspace{2mm}
+            5.25 mM       \gls{edta}            (Grüssing GmbH)  \par \vspace{2mm}
+            100 mM        \gls{tris}            (Sigma-Aldrich)  \par \vspace{2mm}
+            8 M           urea                  (Grüssing GmbH)  \par \vspace{2mm}
+            pH adjusted to 8.6 \vspace{2mm} \\
+
+\textbf{\Gls{IPTG} stock}  &\vspace{2mm}
+                1 M \gls{IPTG}   (Carl Roth)             \par \vspace{2mm}
+                dissolved in \gls{dH2O}            \vspace{2mm} \\
+
+\SetRowColor{mygray!40}
+\textbf{Isothermal reaction buffer (5x)} & \vspace{2mm}
+            500 mM        \gls{tris}                  (Sigma-Aldrich)       \par \vspace{2mm}
+            50 mM         magnesium chloride          (Carl Roth)            \par \vspace{2mm}
+            50 mM         \gls{dtt}                   (Carl Roth)            \par \vspace{2mm}
+            25 mM         \gls{tris}                  (Sigma-Aldrich)        \par \vspace{2mm}
+            5 mM          Nicotinamide adenine dinucleotide                 \par \vspace{2mm}
+            1 mM          of each \gls{dNTP}          (Bioline)              \par \vspace{2mm}
+            25 \% (w/v)    Polyethylene glycol 8000    (Carl Roth)            \par \vspace{2mm}
+            pH adjusted to 7.5 \vspace{2mm}\\    
+
+\textbf{\textbf{Mild stripping buffer}} &  \vspace{2mm}
+            200 mM          glycine       (Sigma-Aldrich)    \par \vspace{2mm}
+            0.1 \% (w/v)     \gls{SDS}     (Serva)            \par \vspace{2mm}
+            1 \% (v/v)       Tween-20      (Sigma-Aldrich)    \par \vspace{2mm}
+            pH adjusted to 2.2 \vspace{2mm} \\
+
+\SetRowColor{mygray!40}
+\textbf{Mild \gls{rsb} (4x)} & \vspace{2mm} 
+            0.02 \% (v/v)    bromophenol blue	  (Merck Millipore) \par \vspace{2mm}
+            12.5 mM       	\gls{dtt}	          (Carl Roth)        \par \vspace{2mm}
+            10 mM           \gls{edta}            (Grüssing GmbH)       \par \vspace{2mm}
+            40 \% (v/v)	    glycerol         	  (Fisher Chemical) \par \vspace{2mm}
+            8 \% (v/v)	    \gls{SDS}             (Serva)              \par \vspace{2mm}
+            200 mM          \gls{tris}            (Sigma-Aldrich)        \par \vspace{2mm}
+            pH adjusted to 6.8 \vspace{2mm} \\
+
+\textbf{\Gls{PFA} stock}   &\vspace{2mm}
+                16 \% (w/v) {PFA}   (Carl Roth)             \par \vspace{2mm}
+                dissolved in in \gls{PBS}                \vspace{2mm} \\
+
+\SetRowColor{mygray!40}
+\textbf{\Glsxtrfull{PBS}} & \vspace{2mm}
+            16 g/l  di-sodium hydrogen phosphate dihydrate   (Merck Millipore)    \par \vspace{2mm}
+            2.4 g/l potassium dihydrogen orthophosphate   (Fisher Chemical)      \par \vspace{2mm}
+            2 g/l   potassium chloride   (VWR Chemicals)                           \par \vspace{2mm}
+            80 g/l  sodium chloride   (neoFroxx)                                  \par \vspace{2mm}
+            pH adjusted to 7.3 \vspace{2mm} \\ 
+
+\textbf{\Gls{PBST}} &\vspace{2mm}
+                0.1 \% (v/v) Tween20   (Sigma-Aldrich)              \par \vspace{2mm}
+                dissolved in 1x \gls{PBS}                            \vspace{2mm} \\ 
+
+\SetRowColor{mygray!40}
+\textbf{Protease Inhibitor (50x)}    &\vspace{2mm}
+                1 tablet cOmplete Protease Inhibitor Cocktail   (Roche)  \par \vspace{2mm}
+                dissolved in 1 ml \gls{dH2O}                            \vspace{2mm} \\
+
+\textbf{\Glsxtrfull{rsb} (4x)} & \vspace{2mm} 
+            0.02 \% (v/v)    bromophenol blue	  (Merck Millipore) \par \vspace{2mm}
+            3.86 \% (w/v)	\gls{dtt}	          (Carl Roth)        \par \vspace{2mm}
+            50 \% (v/v)	    glycerol         	  (Fisher Chemical) \par \vspace{2mm}
+            5 \% (v/v)	    \gls{SDS}             (Serva)              \par \vspace{2mm}
+            225 mM          \gls{tris}            (Sigma-Aldrich)        \par \vspace{2mm}
+            pH adjusted to 6.8 \vspace{2mm} \\
+
+\SetRowColor{mygray!40}
+\textbf{\Gls{tae} buffer} & \vspace{2mm}  
+            50 mM 	\gls{edta}	  (Grüssing GmbH)          \par \vspace{2mm}
+            1 M	glacial acetic acid	  (Fisher Chemical)      \par \vspace{2mm}
+            50 \% (v/v)	glycerol	  (Fisher Chemical)      \par \vspace{2mm}
+            2 M	\gls{tris}	  (Sigma-Aldrich)                 \par \vspace{2mm}
+            pH adjusted to 8.0  \vspace{2mm} \\
+
+\textbf{\Gls{tgs} buffer} & \vspace{2mm}
+            1.92 M Glycine	  (Sigma-Aldrich)         \par \vspace{2mm}
+            0.1 \% (w/v)	\gls{SDS}  	(Serva)      \par \vspace{2mm}
+            250 mM	\gls{tris}  	(Sigma-Aldrich)  \par \vspace{2mm}
+            pH adjusted to 8.3  \vspace{2mm}\\
+
+\SetRowColor{mygray!40}
+\textbf{Washing buffer} &  \vspace{2mm}                
+            20 mM \gls{HEPES}   (neoFroxx)       \par \vspace{2mm}
+            300 mM sodium chloride   (neoFroxx)  \par \vspace{2mm}
+            pH adjusted to 8.0 \\  
+\end{longtable}
+
+%---------------------------------Chemicals Compounds----------------------------------
+\begin{longtable}{|L{11cm}|Y{3.5cm}|}
+    \caption{\textbf{Incomplete list of chemicals, solutions, reaction buffers, and other compounds used in this work.} Any chemicals, solutions, and others not mentioned in the previous tables are listed here.}
+    \label{tab:chemical_list}
+    \\
+        \hline
+        \textbf{Chemicals/Compounds}   & \textbf{Company} \\
+        \hline
+    \endfirsthead
+        \multicolumn{2}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} --- continued from previous page} \\
+        \hline 
+        \textbf{Chemicals/Compounds}   & \textbf{Company}  \\
+        \hline
+    \endhead
+        \hline
+        \multicolumn{2}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+
+\SetRowColor{mygray!40} \textbf{Agarose} & Bio-Budget \\
+                        \textbf{\Gls{BSA}} & Serva  \\  
+\SetRowColor{mygray!40} \textbf{\Gls{DMSO}} & Fisher Chemical \\
+                        \textbf{DNAzol} & Thermo Scientific  \\  
+\SetRowColor{mygray!40} \textbf{\Gls{dNTP} solution mix (10 mM)} & Thermo Scientific \\
+                         \textbf{Gel Loading Dye, Purple (6x)} & New England Biolabs \\  
+\SetRowColor{mygray!40} \textbf{GeneRuler 1 kbp/100 bp Plus} & Thermo Scientific \\
+                         \textbf{Glacial acetic acid} &   VWR chemicals \\ 
+\SetRowColor{mygray!40} \textbf{Green GoTaq Reaction Buffer (5x)} & Promega  \\
+                         \textbf{Hoechst 33258 (10 mg/ml)} & ACROS  \\
+\SetRowColor{mygray!40} \textbf{Protino Ni-NTA Agarose} & Machery-Nagel  \\
+                          \textbf{Phusion HF Buffer (5x)} & New Englad Biolabs  \\
+\SetRowColor{mygray!40} \textbf{Pierce 660nm Protein Assay Reagent} & Thermo Scientific\\ 
+                         \textbf{Poly-L-lysine} & Merck Millipore \\
+\SetRowColor{mygray!40} \textbf{Prestained PageRuler} & Thermo Scientific \\ 
+                         \textbf{rCutsmart Buffer (10x)} & New England Biolabs \\            
+\SetRowColor{mygray!40} \textbf{Rotiphorese/(Bis-)Acrylamid (30~\%} & Carl Roth \\
+                        \textbf{SlowFade Diamond Antifade Mountant} & Invitrogen \\ 
+\SetRowColor{mygray!40} \textbf{Sodium Acetate trihydrate} & Honeywell Fluka \\
+                        \textbf{SuperSignal West Pico PLUS Chemiluminescence-Substrate} & Thermo Scientific \\
+\SetRowColor{mygray!40}  \textbf{SYBR Safe (10,000x)} & Invitrogen \\
+                        \textbf{\Gls{TCE}} & Thermo Scientific \\
+\end{longtable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% and Equipements%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Equipment, kits and software}
+%----------------------------------KITS----------------------------------
+\begin{table}[H]
+        \caption{\textbf{Kits used in this work}}
+        \label{tab:kits_list}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{9cm}|Y{5.6cm}|}
+            \hline
+                \textbf{Kit Name} &  \textbf{Company} \\ 
+            \hline
+                \textbf{Monarch DNA Gel Extraction} & New England Biolabs \\
+                \textbf{Monarch Plasmid Miniprep} & New England Biolabs \\
+                \textbf{Plasmid Plus}  &   QIAGEN \\
+                \textbf{P3 Primary Cell 4D-Nucleofector X} & Lonza \\
+            \hline
+        \end{tabular}   
+    \end{table}
+%----------------------------------Software----------------------------------
+\begin{table}[H]
+        \caption{\textbf{Software used in this work}}
+        \label{tab:software_list}
+        \rowcolors{2}{}{mygray!40}
+\begin{threeparttable}
+        \begin{tabular}{|L{2.2cm}|L{12.4cm}|}
+            \hline
+                \textbf{Utility} &  \textbf{Software} \hfill url and date of last accession \\ 
+            \hline                             
+
+            \textbf{Alignment} & 
+            Clutsal \textgreek{Ω} \textbf{\tnote{a}}  \hfill
+            \begin{small}\url{https://www.ebi.ac.uk/jdispatcher/msa/clustalo} \space 15.09.25\end{small} \par 
+            JalView \textbf{\tnote{b}} \\
+            
+            \textbf{Homology search} & 
+            Phyre2.2 \textbf{\tnote{c}} \hfill 
+            \begin{small}\url{https://www.sbg.bio.ic.ac.uk/phyre2/html/page.cgi} \space 15.09.25\end{small} \\
+            
+            \textbf{In-silico cloning} &    Benchling \hfill 
+            \begin{small}\url{https://benchling.com/editor} \space 25.08.25\end{small}\par
+            SnapGene (Dotmatics) \\
+            
+            \textbf{Prediction tools} & 
+            Alphafold 3 \textbf{\tnote{d}} \space (Google DeepMind) \hfill  \begin{small}\url{https://alphafoldserver.com} \space 15.09.25\end{small}   \par
+            DeepLoc2.1 \textbf{\tnote{e}} \hfill \begin{small}\url{https://services.healthtech.dtu.dk/services/DeepLoc-2.1} \space 15.09.25\end{small} \\
+            
+            \textbf{Properties of proteins} & ProtParam \textbf{\tnote{f}} \hfill
+            \begin{small}\url{https://web.expasy.org/protparam} 15.09.25\end{small} \par
+            HeliQuest \textbf{\tnote{g}} \hfill 
+            \begin{small}\url{https://heliquest.ipmc.cnrs.fr/index.html} \space 15.09.25\end{small}\\
+            
+            \textbf{Image processing} & Leica X, OMERO \textbf{\tnote{h}}\space, ZenBluev2.5 \& ZEN lite (Zeiss)\par
+            PyMol (Schrödinger)  \\
+            \hline
+        \end{tabular}  
+    \begin{tablenotes}\small \raggedright
+    \item[a] \cite{sievers_fast_2011}
+    \item[b] \cite{waterhouse_jalview_2009}
+    \item[c] \cite{powell_phyre22_2025} 
+    \item[d] \cite{abramson_accurate_2024}       
+    \item[e] \cite{odum_deeploc_2024}      
+    \item[f] \cite{walker_protein_2005}
+    \item[g] \cite{gautier_heliquest_2008}
+    \item[h] \cite{allan_omero_2012}
+    \end{tablenotes}
+\end{threeparttable}
+\end{table}
+%----------------------------------Equipement----------------------------------
+\begin{longtable}{|L{4.6cm}|L{10cm}|}
+    \caption{\textbf{In complete list of equipment used in this work}}
+    \label{tab:Equipment_list}
+    \\
+        \hline
+        \textbf{Utility} &  \textbf{Device} (Company) \\ 
+        \hline
+    \endfirsthead
+        \multicolumn{2}{c}{\color{darkgray} \textbf{\tablename\ \thetable{}} --- continued from previous page} \\
+        \hline 
+        \textbf{Utility} &  \textbf{Device (Company)} \\ 
+        \hline
+    \endhead
+        \hline
+        \multicolumn{2}{r}{{\textit{continued on next page}}} \\ 
+    \endfoot
+    \hline
+    \endlastfoot
+\SetRowColor{mygray!40}  \textbf{Blotting device} & SNAP i.d. 2.0 Protein Detection System (Merck Millipore) \\
+                        \textbf{Blotting membrane} & Amersham Hybond P 0.45 µm PVDF (Cytiva) \\
+\SetRowColor{mygray!40} \textbf{Blotting paper} & Whatman Grade GB003 Blotting Paper (Cytiva) \\
+                        \textbf{Blotting transfer system} & Trans-Blot Turbo Transfer System (Bio-Rad Laboratories) \\
+\SetRowColor{mygray!40} \textbf{Cell counter} & Multisizer 4e (Beckman Coulter) \\
+                        %\textbf{Centrifuge} & Z 32 HK centrifuge (Hermle)  
+                        %                 \par Heraeus Fresco 21 centrifuge (Thermo Fisher Scientific)\\
+                         \textbf{Cryostock} & Mr. Frosty freezing container (Thermo Fisher Scientific) \\
+                        %\textbf{Electrophoresis} & nanoPAC-300P (Cleaver scientific Ltd) \\
+\SetRowColor{mygray!40} \textbf{Electroporation} & Nucelofactor 4D (Lonza) \\                
+                        \textbf{Mircroscopes} & confocal: TCS SP8 STED 3X (Leica) 
+                                                        \par epi-: Axio Imager 2 (Carl Zeiss AG)\\
+%\SetRowColor{mygray!40} \textbf{Heatblock} & TSC ThermoShaker (Biometra) 
+%                                         \par Bio TDB-100 (Biosan)\\
+\SetRowColor{mygray!40} \textbf{Imaging system} & Chemidoc MP (Bio-Rad Laboratories) \\            
+%\SetRowColor{mygray!40} \textbf{Incubator} & for \glsxtrshort{Adea}: KT53 and BD56 (Binder) 
+%                                           \par for \glsxtrshort{Eco}: Ecotron (Infors HT) \\
+                        \textbf{Lightning unit} & Illuminator HXP 120 V (Zeiss) \\
+%\SetRowColor{mygray!40}  \textbf{\Glsxtrshort{page}} & Mini-PROTEAN Tetra Cell (Bio-Rad Laboratories) 
+%                                             \par Standard Power Pack P25 T (Analytik Jena) \\
+                         %\textbf{PCR cycler} & Labcycler (SensoQuest GmbH) \\
+\SetRowColor{mygray!40}  \textbf{Protein concentration} & FLUOstar Omega Plate Reader (BMG LABTECH) \\
+                        %\textbf{Pump} & Chemical Duty Vacuum Pressure Pump (Merck Millipore) \\
+                  \textbf{Sonicator} & UP50H Ultrasonic Processor (Hielscher ultrasound technology) \\	
+\SetRowColor{mygray!40}    \textbf{UV-Vis Spectroscopy} & NanoPhotometer NP80 (Implen GmbH) \\
+\end{longtable}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 

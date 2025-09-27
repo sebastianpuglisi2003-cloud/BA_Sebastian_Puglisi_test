@@ -1,0 +1,247 @@
+\section{Methods}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MOL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Molecular methods}
+%----------------------------PCR-----------------------------------
+\subsubsection{\Gls{PCR}} \label{txt:PCR}
+A typical \gls{PCR} reaction mix was used as listed in Table~\ref{tab:pcr_mix_list} for both Phusion HF and GoTaq (see Table~\ref{tab:enzyme_list}). The standard PCR and \gls{TDPCR} program were utilized in this work (see Tables \ref{tab:pcr_standard_program} and \ref{tab:pcr_td_program}). The Phusion HF was used for amplification of backbones as well as inserts and verification of \glsxtrshort{Adea} clones, while the GoTaq was used for \gls{cPCR} to verify \glsxtrshort{Eco} clones. The annealing temperature for the PCR reaction of specific primer (see Table~\ref{tab:primer_list}) pairs was calculated with the melting temperature given by SnapGene. The extension time was also calculated with the synthesis rate provided by the manufacturer and the total size of the fragment to be amplified.
+
+\begin{table}[H]
+        \caption{\textbf{\Gls{PCR} reaction mix for Phusion and GoTaq}}
+        \label{tab:pcr_mix_list}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|L{9cm}|Y{5.5cm}|}
+          \hline
+           \textbf{Component}   & \textbf{Final concentration} \\ 
+            \hline
+            \textbf{Betaine stock solution (5M)} & 1~M \\
+            \textbf{Phusion-HF or GoTaq DNA Polymerase} & 0.02 U/µl \\
+            \textbf{\gls{dNTP} Solution Mix (10~mM each)} & 200~µM \\
+            \textbf{Reaction buffer (5x)} & 1x \\
+            \textbf{Primer \gls{fwd}} & 0.5~µM \\
+            \textbf{Primer \gls{rev}} & 0.5~µM \\
+            \textbf{Template} & $\sim$1 ng/µl \\
+            \textbf{\gls{dH2O}} &  ad 25 or 10~µL \\
+            \hline
+        \end{tabular}
+\end{table} 
+
+\begin{table}[H]
+        \caption{\textbf{Standard \Gls{PCR} programm used for Phusion HF and GoTaq}}
+        \label{tab:pcr_standard_program}
+        \begin{tabular}{|L{2cm}|Y{1.5cm}|Y{1.7cm}|Y{1.4cm}|Y{1.5cm}|Y{1.7cm}|Y{1.4cm}|}
+            \hline
+            \multirow{2}{*}{\textbf{Step}} & \multicolumn{3}{c|}{\textbf{Phusion HF program}} & \multicolumn{3}{c|}{\textbf{GoTaq program}} \\  
+                & \textbf{T [~°C]} & \textbf{Duration} & \textbf{Cycle} & \textbf{T [~°C]} & \textbf{Duration} & \textbf{Cycle} \\ 
+            \hline
+\rowcolor{mygray!40} \textbf{Initial denature}   & 98    & 5~min & 1             & 95    & 5~min & 1                    \\
+            \textbf{Denature}           & 98    & 30 s  &                        & 95    & 30 s  &                       \\
+            \textbf{Annealing}          & 45--72 & 30 s  &                        & 42--65 & 30 s  &                       \\
+            \textbf{Extension}         & 72    & 30 s/kbp  & \multirow{-3}{*}{30}    & 72    & 60 s/kbp  & \multirow{-3}{*}{30}    \\
+\rowcolor{mygray!40} \textbf{Final Extension}   & 72    & 5~min & 1              & 72    & 5~min & 1                        \\
+            \textbf{Cooling}            & 16    & \multicolumn{2}{Y{3.75cm}|}{hold} & 16    & \multicolumn{2}{Y{3.75cm}|}{hold} \\
+            \hline
+        \end{tabular}
+\end{table}
+
+\begin{table}[H]
+        \caption{\textbf{\Gls{TDPCR} programm with Phusion HF used in this work}}
+        \label{tab:pcr_td_program}
+        \begin{tabular}{|L{3.2cm}|Y{3cm}|Y{3cm}|Y{4cm}|}
+            \hline    
+            \textbf{Step} & \textbf{T [~°C]} & \textbf{Duration} & \textbf{Cycle}  \\ 
+            \hline
+\rowcolor{mygray!40} \textbf{Initial denature}   & 98           & 5~min  & 1     \\        
+            \textbf{Denature}           & 98                    & 30 s   &       \\
+            \textbf{Annealing}          & 72 $\rightarrow$ 68   & 30 s   &       \\
+            \textbf{Extension}          & 72                    & 30 s/kbp   &  \multirow{-3}{8em}{2 cycles each with $\Delta$T\textsubscript{Anneal} $=-1$~°C}      \\
+\rowcolor{mygray!40} \textbf{Denature}  & 98    & 30 s   &       \\
+\rowcolor{mygray!40} \textbf{Annealing} & 60    & 30 s   &       \\
+\rowcolor{mygray!40} \textbf{Extension} & 72    & 30 s/kbp   &  \multirow{-3}{*}{2}    \\ 
+            \textbf{Denature}           & 98                    & 30 s   &       \\
+            \textbf{Annealing}          & 66                    & 30 s   &      \\
+            \textbf{Extension}          & 72                    & 30 s/kbp   &  \multirow{-3}{*}{22}    \\
+\rowcolor{mygray!40} \textbf{Final extension}   & 72           & 5~min  & 1     \\
+            \textbf{Cooling}            & 16           & \multicolumn{2}{Y{7cm}|}{hold}     \\
+            \hline
+        \end{tabular}
+    \end{table}
+ 
+%----------------------------Agar-----------------------------------
+\subsubsection{Agarose gel electrophoresis} \label{txt:AGEle}
+ Agarose gel electrophoresis was utilised to separate DNA fragments. For separation, 1~\% (w/v) agarose dissolved in one-fold \gls{tae} buffer (see Table~\ref{tab:buffers_used}) was used. DNA fragments above 3 kbp were separated on a 0.8~\% gel. In-gel staining of DNA was done with SYBR safe. For DNA ladders, either the GeneRuler 1 kbp or GeneRuler 100 bp Plus was used. All DNA samples were loaded with purple Gel loading dye. Gels were run at 120 V for 20 to 30~min, depending on the type of gel and the degree of desired separation. Gels were imaged via the ChemiDoc MP.
+%----------------------------Gibson-----------------------------------
+\subsubsection{Generation of new plasmids via Gibson assembly} \label{txt:Cloning}
+Gibson assembly \parencite{gibson_enzymatic_2009} was used as the cloning strategy to generate new plasmids. The primers and their overhangs had been designed specifically for that strategy (see Table~\ref{tab:primer_list}). The backbone (pAdea301 see Table~\ref{tab:plasmid_list}) was amplified in two parts with the following primers: 3363 combined with 3418/3422/3426, amplifying a 4.7 kbp sized fragment (called Part A), and 3364 combined with 3417/3424/3425, resulting in a 1.9 kbp sized fragment (called Part B). The inserts were amplified from GPN308~--~GPN310 (see Table~\ref{tab:plasmid_list}) with the primers paired as follows: 3415 with 3416 for \textit{uTP\textsubscript{pfkB}}, 3419 with 3420 for \textit{uTP\textsubscript{pyrE}}, and 3423 with 3424 for \textit{uTP\textsubscript{thrC}}. Amplification was done with the standard PCR using Phusion HF. All DNA fragments were loaded onto an agarose gel, and DNA gel extraction was performed using the Monarch DNA Gel Extraction Kit according to the manufacturer's protocol. DNA concentration was measured with the Nanophotometer  NP80. 
+
+\par A three-fragment assembly was done with both parts (A and B) of the backbone and inserts (any of the uTPs). The ratio of Part A to Part B to insert was chosen to be 1:2:4, proportional to their size.  The reaction mix as listed in Table~\ref{tab:gibson_mix} was used. The reaction was carried out at 50~°C in the heat block for 60~min. \glsxtrshort{Eco} was then transformed using the whole assembly mix. 
+
+\begin{table}[H]
+        \caption{\textbf{Gibson assembly reaction mix for 20~µL}}
+        \label{tab:gibson_mix}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|L{10cm}|Y{4.5cm}|}
+          \hline
+           \textbf{Component}   & \textbf{Volume for 20~µL reaction} \\ 
+            \hline
+            \textbf{Isothermal reaction buffer (5x)} & 4~µL \\
+            \textbf{\gls{dH2O}} & ad 20~µL \\
+            \textbf{Phusion HF DNA polymerase (2 U/µL)} & 0.25~µL \\
+            \textbf{T5 exonuclease	(1 U/µL)} & 0.08~µL \\
+            \textbf{Taq DNA ligase	(40	U/µL)} & 2~µL \\
+            \textbf{Template (20~--~500 fmol)}    
+            \par Backbone Part A \par Backbone Part B \par Insert  & 
+            \quad \par 32 fmol    \par  64 fmol      \par 132 fmol \\
+            \hline
+        \end{tabular}
+    \end{table} 
+%----------------------------Digest and Precipitation-----------------------------------
+\subsubsection{DNA digestion and precipitation of the transfection cassette} \label{txt:Digest_and_precipitation}
+For the transfection, the transfection cassette needed to be excised from the vectors. Before digestion, a midi prep was done to generate enough plasmid to digest 40~µg of plasmid DNA. All plasmids (pAdea481~--~pAdea483; see Table~\ref{tab:plasmid_list}) were digested with EcoRV-HF (see Table~\ref{tab:enzyme_list}). The reaction was incubated at 37~°C overnight. A gel electrophoresis with 1~µL of the reaction mix was performed to check if the digest is completed. 
+
+\par Following successful digestion of plasmids, the DNA was then concentrated via precipitation. First, 3~M sodium acetate and 100~mM EDTA were added to the digestion mix as one-tenth of the reaction volume, respectively. Subsequently, three times the reaction volume was added as 100~\% ethanol and then centrifuged at maximum speed for 15~minutes. The supernatant was discarded, and the precipitated DNA was washed twice with 70~\% ethanol by centrifuging for 1~min at maximum speed. The supernatant was removed and the leftover ethanol was dried prior to resuspending the DNA in 10~µL \gls{dH2O}. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% MIRCO %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Microbiological methods}
+%----------------------------Culture Eco-----------------------------------
+\subsubsection{Culturing of \textit{Escherichia coli}} \label{txt:Culture_Eco}
+\Gls{lb} medium (see Table~\ref{tab:media_composition}) was used as the standard medium to grow \glsxtrshort{Eco} either on plates or as liquid cultures with the corresponding antibiotics (see Table~\ref{tab:antibiotic_sol}). Cultures were incubated overnight at 37~°C with orbital shaking at 160~--~180~rpm. 
+%----------------------------Mini-----------------------------------
+\subsubsection{Isolation of plasmids from \textit{Escherichia coli} (Miniprep and Midiprep)} \label{txt:Plasmidprep}
+Prior to isolation, a 3~mL (mini) or 35~mL (midi) liquid culture with corresponding antibiotics was grown overnight. Plasmid isolation was done either with the Monarch Plasmid Miniprep Kit or the Plasmid Plus Kit (see Table~\ref{tab:kits_list}) as instructed by the manufacturer. The concentration of the extracted plasmid was measured with the Nanophotometer NP80.
+%----------------------------Trafo + Verifikation-----------------------------------
+\subsubsection{Transformation of \textit{Escherichia coli} and verification of transformed clones/plasmids} \label{txt:Trafo_and_veri}
+Competent cells (see Table~\ref{tab:organism_list} cloning strains) were thawed at room temperature. After thawing, \space 10~pg~--~100 ng of plasmid DNA were added and mixed into the cell suspension by gently flicking the tube. The cells were incubated on ice for 20~min, then heat-shocked at 42~°C for 45 s, and immediately placed again on ice for 2~minutes. To regenerate treated cells,  1~mL of LB medium without antibiotics was added and incubated at 37~°C and 550~rpm in the heat block for 1 hour. Afterwards, the cells were centrifuged at 10000~x~g for 3~min, most of the supernatant was discarded, and the pellet was resuspended in the leftover volume. The cell suspension was streaked out evenly on an LB-agar plate containing the corresponding antibiotic and was incubated overnight at 37~°C.  
+
+\par To verify generated clones, a \gls{cPCR} was done using the primers 572 and 1440. Either half a colony was directly resuspended in the PCR mixture, or the colony was first resuspended in 10~µl of \gls{dH2O} and then 1~µL of this resuspension was added to the reaction mix. PCR products were run on an agarose gel electrophoresis.
+
+\par If clones displayed positive bands, they were chosen to be sequenced for verification of the transformed plasmid. A~mini liquid culture was prepared of these clones, and then the~miniprep was used to extract plasmid DNA. Sequencing was done by Microsynth Seqlab GmbH with the economy run option of the Sanger sequencing service.
+%----------------------------Glyci Eco strain-----------------------------------
+\subsubsection{Glycerol stock preparation for \textit{Escherichia coli}} \label{txt:Cryo_Eco}
+Cryo-preservation for long-term storage of generated \glsxtrshort{Eco} strains was done by preparing glycerol stocks. A liquid~mini culture was prepared and grown overnight with the corresponding antibiotics. Glycerol stocks consisted of 25~\% (v/v) glycerol and 75~\% of \glsxtrshort{Eco} culture with a final volume of 1.4~mL. Cryotubes were used to store desired cultures at -70~°C.
+%----------------------------Culture Adea-----------------------------------
+\subsubsection{Culturing of \textit{Angomonas deanei}} \label{txt:Culture_Adea}
+\Gls{bhi} medium (see Table~\ref{tab:media_composition}) was used as the standard medium to grow \glsxtrshort{Adea} in 5~mL cultures with the corresponding antibiotics (see Table~\ref{tab:antibiotic_sol}). Cultures were continuously incubated at 28~°C and passaged twice a week by inoculating fresh medium with 1~µl of the existing culture. Each experiment should aim to use cultures in the exponential phase (0.5~$\cdot$~10$^7$~--~5~$\cdot$~10$^7$~cells/mL).
+
+\subsubsection{Expression culture of \textit{Angomonas deanei} and sample preparation} \label{txt:express_ango} 
+Expression cultures were cultivated in 15~mL \Gls{bhi} medium with corresponding antibiotics and incubated at 28~°C with orbital shaking at 120~rpm. The cultures were harvested by centrifuging them at 8000~x~g for 15~min when they had reached a cell density of around 2~$\cdot$~10$^7$~cells/mL. The pellet was washed twice before resuspending it in 200~--~1000~µL 1x~\gls{PBS}. From here on, the samples were treated with caution, keeping them mostly cooled and in the dark. Additionally, 1x~protease inhibitor (see Table~\ref{tab:buffers_used}) and a small amount of DNase I (see Table~\ref{tab:enzyme_list}) were given to the samples. Cell lysis was done by sonication for 90s with a cycle of 0.8 and an amplitude of~\% with the MS1 sonotrode. The cell lysate was centrifuged at 3000~rpm and 4~°C for 5~min. The supernatant was transferred to a fresh microcentrifuge tube, and the protein concentration was determined by the Pierce 660~nm assay. The samples were stored 
+%----------------------------Transfection and Verification-----------------------------------
+\subsubsection{Transfection of \textit{Angomonas deanei} and verification of transfected clones} \label{txt:Transfection}
+Transfection (using the P3 Primary Cell 4D-Nucleofector X kit) is done to integrate a desired DNA sequence in \glsxtrshort{Adea} by homologous recombination. The transfection cassette contained the 3$^\prime$ and 5$^\prime$ \gls{FR} of the \gls{d-ama} or \gls{g-ama} locus, the \gls{hygR} or \gls{neoR}, the \gls{GAPDH IR}, and the construct to be expressed \parencite{morales_development_2016}. 
+
+\par First, 10$^7$~cells from an exponential culture were pelleted by centrifugation at 8000~x~g for 10~min. The supernatant was completely removed, followed by the cell pellet being resuspended in P3 buffer, to which $\sim$8~µg of the previously digested transfection cassette were added. The whole mixture was pipetted into the transfection cuvette and then placed into the Nucleofactor. The cells were electroporated utilizing the Nucleofactor's FP158 program, then transferred to fresh medium containing the antibiotic to which the recipient cell line had a resistance. The treated cells were incubated for 6 hours to regenerate. Afterwards, the second antibiotic was added, against which the transfection cassette encodes the corresponding resistance. A limiting dilution was performed to dispense the cells in a 96-well plate to a concentration of 1~cell/ml. The plates were incubated until single wells turned turbid or for a maximum of 10 days, until they could be discarded.    
+
+\par Turbid wells were transferred to a 24-well plate. If cultures grew in these wells, \gls{gDNA} extraction was done using DNAzol. From these cultures, 500~µL was taken and centrifuged at 10000~x~g for 10~min. The supernatant was discarded, the pellet was resuspended in 200~µL DNAzol, and again centrifuged. The supernatant was transferred to a clean microcentrifuge tube, in which 200~µL 100~\% ethanol were added. The mixture was incubated for 3~min before centrifuging for 3~min. The supernatant was again discarded, and the pellet was washed once with 70~\% ethanol, centrifuging it again for 3~min. The ethanol was fully removed, and the extracted gDNA was resuspended in 20~µL \gls{dH2O}.  
+
+\par \gls{TDPCR} was utilised to amplify the genomic region where the integration should have taken place. Amplification was done via the primers 49 and 545, which bind outside the \gls{d-ama} locus. Of the extracted gDNA, 1~µL was used for the PCR reaction. The finished PCR reaction was run on an agarose gel and imaged with the ChemiDoc. Positive clones were maintained and cryo-stocked.
+%----------------------------DMSO Adea-----------------------------------
+\subsubsection{\Gls{DMSO} cyro-stock preparation for \textit{Angomonas deanei}} \label{txt:Cryo_Adea}
+For long-term storage of \glsxtrshort{Adea} strains, a \gls{DMSO} stock was prepared using cultures that were grown to the exponential phase. For each cryo-stock, 950~µL of culture were mixed with 50~µL of DMSO (see Table~\ref{tab:chemical_list}). For every strain, two clones were preserved. Mr. Frosty freezing container was filled with isopropanol, and then the cryo-tubes were placed in it. The whole device was cooled at -70~°C for 3 hours. Afterwards, the cryo-tubes were transferred to the liquid nitrogen tanks and kept at -190~°C.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Expression and Purification %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Methods for protein work} 
+%----------------------------Pierce assay-----------------------------------
+\subsubsection{Pierce 660~nm protein assay } \label{txt:Pierce_Assay}
+The Pierce 660~nm protein assay (by Thermo Fisher) works by measuring the absorbance at 660~nm of a dye-metal complex, similarly to the bicinchonic acid assay \parencite{smith_measurement_1985}. The complex gets protonated in the presence of proteins, which shifts its absorbance spectrum. 
+ 
+\par The BSA standard (ranging from 50~--~2000~µg/mL) and the samples (diluted 1:2, 1:5, and 1:10) were pipetted into 96-well plate. 150~µL of Pierce reagent (see Table~\ref{tab:chemical_list}) were added. The reaction was incubated for 10~min and then measured by the FLUOstar Omega Plate Reader. The standard was used to calculate the linear regression to evaluate the protein concentration in the samples.
+%----------------------------TCA precipitation-----------------------------------
+\subsubsection{Trichloroacetic acid precipitation}
+Protein precipitation was used to concentrate proteins from supernatant fractions of \glsxtrshort{Adea} expression cultures. \Gls{TCA} was added to the samples such that the final concentration was 10~\% (v/v). The samples were incubated on ice for 10~min, followed by centrifugation at 4~°C and maximum speed for 20~min. The supernatant was discarded, and the pellet was washed twice with ice-cold acetone, centrifuging for 10~min. After washing, the supernatant was removed, letting the leftover acetone fully evaporate. The pellet was resuspended in Holy urea buffer (see Table~\ref{tab:buffers_used}). Protein concentration was measured with the Pierce assay. 
+%----------------------------PAGE-----------------------------------
+\subsubsection{\Gls{page}} \label{txt:SDSPAGE}
+\Gls{page}s were used to separate proteins based only on their mass \parencite{smith_sds_1984, laemmli_cleavage_1970}. Samples were mixed with 4x~\gls{rsb} and incubated at 90~°C for 5~min to be fully denatured.  Treated samples were loaded into the wells of the polyacrylamide gels (see Table~\ref{tab:components_page_gels}). For stain-free imaging of gels, \gls{TCE} was added to the polyacrylamide gels, which covalently modifies tryptophan \parencite{ladner_visible_2004}. All wells were equally loaded with 20~µL for \glsxtrshort{Eco} samples or equally loaded with 20~--~25~µg of protein for \glsxtrshort{Adea} samples. As the ladder, the prestained PageRuler was used. The \gls{page} was run at 40 mA per gel for 20~--~30~min using 1x~\gls{tgs} running buffer (see Table~\ref{tab:buffers_used}). The gel was imaged using the ChemiDoc MP. The resulting bands were compared to the molecular weight calculated by ProtParam.
+
+\begin{table}[H]
+        \caption{\textbf{Recipe for two \gls{SDS}-polyacrylamide gels}}
+        \label{tab:components_page_gels}
+        \rowcolors{2}{}{mygray!40}
+        \begin{tabular}{|Y{3.9cm}|Y{6cm}|Y{4cm}|}
+          \hline
+           \textbf{Type of gel}   & \textbf{Component} & \textbf{Volume} needed \\ 
+            \hline
+            & \gls{dH2O} & 4.1~mL \\
+\cellcolor{mygray!40} &  30~\% (Bis-)Acrylamide  & 3.3~mL\\
+             &  1.5~M \gls{tris} (pH 8.8)  & 2.5~mL \\
+\cellcolor{mygray!40}  &  10~\% \gls{SDS}   & 100~µL \\
+             &  Tetramethylethylenediamine  & 10~µL \\
+\cellcolor{mygray!40}  &  10~\% Ammonium persulfate   & 32~µL \\
+            \multirow{-7}{*}{\textbf{10~\% Resolving gel}} 
+\cellcolor{mygray!40} & \gls{TCE}  & 50~µL \\
+
+            
+            & \gls{dH2O} & 3.05~mL \\
+\cellcolor{white}  &  30~\% (Bis-)Acrylamide  & 0.65~mL\\
+             &  1.5~M \gls{tris} (pH 6.8)  & 1.25~mL \\
+\cellcolor{white} &  10~\% \gls{SDS}   & 50~µL \\
+             &  Tetramethylethylenediamine  & 5~µL \\
+            \multirow{-6}{*}{\textbf{4~\% Stacking gel}} \cellcolor{white}
+            &  10~\% Ammonium persulfate   & 50~µL \\
+            \hline
+        \end{tabular}
+    \end{table} 
+%----------------------------Western-----------------------------------
+\subsubsection{Conventional semi-dry Western blotting} \label{txt:cWB}
+Western blotting was used to detect specific proteins via immunological and luminol reaction \parencite{towbin_electrophoretic_1979}. This served to verify \gls{page} results. Before blotting, the PVDF membrane was equilibrated in 100~\% ethanol, while the SDS-polyacrylamide gel and the Whatman paper were equilibrated and soaked in Friendly buffer (see Table~\ref{tab:buffers_used}), respectively. The proteins from the polyacrylamide gels were transferred by electrophoresis using the Trans-Blot Turbo Transfer System. The Whatman paper layers consisted of six sheets (each 0.8 mm thick). The blotting sandwich was layered from bottom to top: first layer of Whatman paper, PVDF membrane, SDS-polyacrylamide gel, second layer of Whatman paper. The standard program (25~V, 1~A, 30~min) was used for transfer. Following the transfer, the membrane was incubated in blocking solution (see Table~\ref{tab:buffers_used}) for 1 hour or alternatively at 4~°C overnight. All incubation or washing steps were carried out on an orbital shaker at 60~rpm  with the membrane being covered in liquid. In between incubation steps, the membrane was washed for 5 min twice with 1x~\gls{PBS} and once with 1x~\gls{PBST}. The primary and conjugate antibodies (\textgreek{α}-GFP, \textgreek{α}-6xHis, and \textgreek{α}-HIS-HRP; see Table~\ref{tab:antibody_list}) were added to the membrane and either incubated for 1 hour at room temperature or overnight at 4~°C. If a primary antibody had been used, the secondary antibody \textgreek{α}-mouse (see Table~\ref{tab:antibody_list}), containing the \gls{HRP}, was added to the membrane after washing it. Primary and secondary antibodies were not discarded but reused up to four times. Following the last washing step, 700~µL of the SuperSignal West Pico PLUS chemiluminescence substrate was added to the membrane. The blot was immediately imaged with the ChemiDoc MP. The Western blot membranes were stored at -20~°C. 
+%----------------------------SNAP.ID-----------------------------------
+\subsubsection{Western blotting via SNAP.ID 2.0} \label{txt:SNAPID}
+Western blotting was also performed using the SNAP.ID 2.0 system. The transfer of proteins from the \gls{page} to the PVDF membrane was the same as in the conventional Western blot. The blotting protocol was followed according to the manufacturer's instructions.  
+%----------------------------Strip-----------------------------------
+%\subsubsection{Stripping of western blots} \label{txt:Stripping}
+%Some Western blots were re-examined by stripping the antibodies from the membrane and then repeating the blotting procedure. Incubation steps were performed analogously to the conventional Western blot. The membrane was first covered with mild stripping buffer (see Table~\ref{tab:buffers_used}) and incubated for 5~min. The buffer was discarded, and the step was repeated. Afterwards, the membrane was washed twice with \gls{PBS} for 10~min, followed by washing twice with \gls{PBST} for 5~min. The work continued with the blocking of the membrane and the immunological reactions as described in the conventional Western blot.
+%----------------------------Test express-----------------------------------
+\subsubsection{Test expression in  \textit{Escherichia coli}} \label{txt:Testexpress}
+A test expression was utilized to examine under which growth conditions \glsxtrshort{Eco} can produce the most heterologous recombinant protein. For this purpose, the engineered expression strain LOBSTR (see Table~\ref{tab:Eco_list}) was used due to having a diminished protease activity, lower background in the co-purification of endogenous proteins, and an \gls{IPTG}-inducible T7 expression system \parencite{andersen_optimized_2013, studier_use_1986}.
+
+\par Specific constructs were generated for the expression of the \gls{utp}s. They contained a tag of \gls{6xhis}, \gls{sumo} for improved solubility, \gls{tev site} for cleavage of the tag, and a linker made out of three glycine-serine pairs (3xGS). This was fused to the N-terminus of the uTPs (see Table \ref{tab:plasmid_list}). 
+
+\par 20~mL LB medium with \gls{amp} and \gls{cm} (see Table~\ref{tab:antibiotic_sol}) were inoculated with \glsxtrshort{Eco} LOBSTR and grown overnight. The  20~mL main cultures contained either \gls{lb} or \gls{2yt} medium (see Table~\ref{tab:media_composition}) with corresponding antibiotics, and were inoculated with the pre-culture to an \glsxtrshort{OD} of 0.1. When the cultures had reached an \glsxtrshort{OD} of 0.4~--~0.6, they were induced with 0.5~mM \gls{IPTG} (see Table~\ref{tab:buffers_used}) and were then split up into different conditions. For each medium, one culture was grown at 37~°C, 28~°C, and 16~°C. 600~µL samples were taken as described in Table~\ref{tab:test_exp_timepoints}. Cells were immediately harvested by centrifuging them at maximum speed for 1~min. The supernatant was discarded and the pellet was resuspended in 60~µL \gls{PBST} with an additional 30~µL of 4x \gls{rsb} (see Table~\ref{tab:buffers_used}). Samples were used directly for downstream analysis (\gls{page} and Western blot) or stored at -20~°C. 
+
+\begin{table}[H]
+        \caption{\textbf{Time points of sampling for each temperature condition in the test expression.} Crosses mark sampled time points. \Gls{ni} meant shortly before induction; \gls{on}.}
+        \label{tab:test_exp_timepoints}
+        \rowcolors{2}{}{mygray!40}
+\begin{tabular}{|Y{2.9cm}|Y{1.4cm}|Y{1.4cm}|Y{1.4cm}|Y{1.4cm}|Y{1.4cm}|Y{1.4cm}|}
+          \hline
+            &  \multicolumn{6}{c|}{\textbf{Time points before/after induction}} \\
+            \cellcolor{white} \multirow{-2}{5.8em}{\textbf{Growth temperature}}
+            & \textbf{ni} & \textbf{1 hour} & \textbf{2 hour} 
+            & \textbf{3 hour} & \textbf{4 hour} & \textbf{on} \\
+           \hline
+\textbf{37~°C}   & \LARGE{\textbf{$\times$}}  & \LARGE{\textbf{$\times$}} & \LARGE{\textbf{$\times$}} 
+                & \LARGE{\textbf{$\times$}} & &  \\
+\textbf{28~°C}   &\LARGE{\textbf{$\times$}} & & & & \LARGE{\textbf{$\times$}} &  \LARGE{\textbf{$\times$}} \\
+\textbf{16~°C}   & \LARGE{\textbf{$\times$}} & & & & & \LARGE{\textbf{$\times$}} \\
+            \hline
+\end{tabular}
+\end{table} 
+
+%----------------------------Sol test-----------------------------------
+\subsubsection{Solubility test} \label{txt:Testsol}
+Following the test expression, the solubility test served to determine which growth condition contained the most soluble protein in the cytosolic fraction. Based on the results of the expression test, four growth conditions were chosen. Pre- and main cultures were treated as described in the test expression protocol.  Here, a 50~mL main culture was used instead of 20~mL.  The time point of harvesting the cultures was set to be the sampling time points of the corresponding condition. Harvesting was done by centrifuging the entire culture at 5500~x~g for 10~min. The pellets were resuspended in 5~mL washing buffer (see Table~\ref{tab:buffers_used}) per 1~g of pellet. From this cell suspension, 1~mL was sonicated using the MS1 sonotrode for 6~min with an amplitude of 60~\%, and a cycle of 0.5, while the remaining suspension was stored at -20~°C. Additionally, 1x protease inhibitor (see Table~\ref{tab:buffers_used}) and a small amount of DNase I (see Table~\ref{tab:enzyme_list}) were given to the samples. Before pelleting the lysate, 50~µL of this fraction were taken as a cell lysate sample. The remaining cell lysate was pelleted by centrifuging at 12000~x~g at 4~°C for 15~min. From the supernatant fraction, a 50~µL sample was taken. 25~µL of 4x~\gls{rsb} were added to the collected samples. Samples were either directly used in downstream analysis (\gls{page} and Western blot) or stored at -20~°C.
+%----------------------------Puri test-----------------------------------
+\subsubsection{Batch purification by immobilized metal ion chromatography} \label{txt:Testpuri}
+The test purification utilized \gls{IMAC} \parencite{porath_immobilized_1992} in the form of batch purification. Moreover, \gls{Ni-NTA} embedded in agarose (see Table~\ref{tab:chemical_list}) was chosen as the resin to bind proteins containing \gls{6xhis} tags.  
+
+\par The protein sample of the growth condition that contained the most soluble protein was chosen for the test purification. The sample was prepared by sonicating 1~mL of the remaining cell suspension from the previous solubility test and centrifuging the lysate at 4~°C and 12000~x~g for 1 hour.   
+
+\par All subsequent centrifugation steps were carried out at 1000~x~g and 4~°C for 1~min. Sampling was done by taking 50~µL from the current step and adding 25~µL 4x \gls{rsb} to the taken sample before discarding the rest of the supernatant and continuing with the next step. For repeated centrifugation of the same step, only the first and third time were taken for sampling. Each time a fluid was added to the \gls{Ni-NTA} resin, the microcentrifuge tube was gently inverted 2~--~3 times to mix the fluid with the resin. 
+
+\par First, the resin was prepared before it could be loaded with the protein sample. To prepare the \gls{Ni-NTA} resin, 1~mL of \gls{Ni-NTA} agarose resin was added to a 2~mL microcentrifuge tube. The resin was then washed five times with \gls{dH2O} and equilibrated in washing buffer. Now, the resin was ready to be loaded with 1~ml of the supernatant from the protein sample from the previous steps. The loaded resin was incubated in the rotator at 4~°C for 90~min. Following incubation, the flow-through sample was collected. The protein resin mixture was washed three times with the washing buffer, and samples were taken. Afterwards, the increasing elutions were performed, carrying out each elution step three times. Initially, 50 mM imidazole was loaded, which was then increased by loading 100, then 250, and lastly 500~mM imidazole elution buffer (see Table~\ref{tab:buffers_used}). Samples from each elution step were taken and named accordingly: e50, e100, e250, and e500. Samples were either immediately used in downstream analysis (\gls{page} and Western blot) or were stored at -20~°C 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Fluorescence Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Fluorescence analysis in \textit{Angomonas deanei}} 
+%----------------------------In-Gel-----------------------------------
+\subsubsection{In-gel fluorescence assay for eGFP and mScarlet} \label{txt:Ingel_Fluorescence}
+The in-gel fluorescence assay was used to detect fluorescent proteins, like \gls{mSc}, inside an \gls{page} \parencite{sanial_direct_2025}. The expression cultures were set up as well as harvested, and the supernatant samples were done as described in chapter \ref{txt:express_ango}. The protein samples for loading the \gls{page} were prepared to contain 20~--~25~µg of protein and 1x~mild \gls{rsb} (see Table~\ref{tab:buffers_used}). These protein samples were incubated at 30~°C (adapted to GFP sensitivity) for 5~min. The \gls{page} containing \gls{TCE} was loaded with the samples and ran at 20~mA per gel in 1x~\gls{tgs} running buffer for 65~min. While the \gls{page} ran, it was also covered to prevent bleaching of the fluorescent proteins. The polyacrylamide gel was imaged by the ChemiDoc MP. The UV light was used to detect proteins stained by \gls{TCE}, while the Cy3 and Cy2 channels were utilized for detecting \gls{mSc} and \gls{egfp}, respectively.  
+%----------------------------EPi-----------------------------------
+\subsubsection{Epifluorescence microscopy of \textit{Angomonas deanei}} \label{txt:epiflu_micro}
+A 10-well microcopy slide was prepared by adding 10~µL of poly-L-lysine to each well and letting these spots dry at 50~°C. From a culture in the exponential phase, 500~µL were transferred to a microcentrifuge tube in which \gls{PFA} (see Table~\ref{tab:buffers_used}) was added with a final concentration of 4~\% (v/v). To fixate the samples, they were incubated for 10~minutes in the dark. After fixation, the samples were centrifuged at 7000~x~g for 5~min and washed twice with \gls{PBS}. The cells were resuspended in a final volume of 200~--~1000~µL PBS, dependent on the pellet size, and 10~µL of the cell suspension were added to one of the wells. The cells were stained with 5~µL Hoechst (10~µg/ml were used; see Table~\ref{tab:chemical_list}). The slides were again incubated in the dark for 10~minutes. After incubation, the residual Hoechst staining solution was removed by washing the cells three times with 1x~\gls{PBS}. Here, 30~µL of 1x~\gls{PBS} were added to the wells, and then incubated for 3~min before removing the \gls{PBS} again. Following the last washing step, 8~µL of Slowfade Diamond were pipetted onto the wells, and the cover slip was put on. Hoechst was used for DNA staining  \parencite{latt_spectral_1976}.
+
+\par The fluorescence signals of \gls{egfp}, \gls{mSc}, and Hoechst were analyzed. The Axio Imager 2, equipped with the AxioCam MRm (Zeiss), EC Plan-Neofluar 100x/1.30 Oil Ph3 M27 (Zeiss) objective and the Illuminator HXP 120 V lightning unit, was used for epifluorescent microscopy. Captured images were processed with the ZenBluev2.5, ZEN Lite software, and OMERO (University of Dundee and Open Microscopy Environment; see Table~\ref{tab:software_list}). The filter sets (Zeiss) used for detection were: 49 (excitation: 365~nm; emission: 445~nm) for Hoechst, 38HE (excitation: 470~nm; emission: 525~nm) for \gls{egfp}, and 43HE (excitation: 550~nm; emission: 605~nm) for \gls{mSc}. For each strain, triplicates were taken and each triplicate consisted of four images: \gls{dic} with autoexposure, \gls{egfp} filter with 400 ns exposure time, \gls{mSc} filter with 200 ns exposure time, and Hoechst filter with 45 ns exposure time. For each strain, overview images with the different channels were taken as triplicates. From these images, exemplary single cells were selected for further analysis. Negative controls, such as Adea126 for \gls{egfp} and Adea304 for \gls{mSc} (see Table~\ref{tab:Adea_list}), were used to determine cut-off values for autofluorescence.   
+%----------------------------Confocal-----------------------------------
+\subsubsection{Confocal fluorescence microscopy of \textit{Angomonas deanei}} \label{txt:confo_micro}
+Fixation and staining were done as described previously. The Leica TCS SP8 STED 3X was used for confocal fluorescent microscopy. Fluorescence signals of \gls{egfp}, \gls{mSc}, and Hoechst were analyzed. Captured images were processed with the Leica X software and OMERO (see Table~\ref{tab:software_list}). The white light laser was used at 60~\%, with the laser line set for \gls{egfp} 30~\% gain (excitation: 488~nm) and \gls{mSc} 35~\% gain (excitation: 569~nm). Hybrid detectors were set to capture emissions in ranges of 505~--~525~nm for \gls{egfp} and 580~--~620~nm for \gls{mSc}. Additionally, time gating was set for \gls{egfp} at 0.4~--~3.9 s and for \gls{mSc} 0.8~--~4.5 s. Moreover, autofluorescence control and image sampling were performed as described in the epifluorescence microscopy section.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

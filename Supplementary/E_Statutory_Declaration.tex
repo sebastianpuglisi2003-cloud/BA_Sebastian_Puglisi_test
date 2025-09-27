@@ -1,0 +1,81 @@
+\begingroup
+\let\clearpage\relax
+\chapter{Statutory Declaration}
+I hereby declare that I, Sebastian Puglisi, have authored the thesis titled \emph{\textbf{Production and localisation studies of fusion proteins containing Braarudosphaera nitroplast targeting signals in heterologous systems.}} This work has been conducted independently by me and guided by the "rules on the principles for safeguarding good research practice at Heinrich Heine University Düsseldorf". Any work outside of my own (that I quoted or modified) is acknowledged and labeled accordingly.
+
+
+
+\makeatletter
+  \newcommand*\signaturelinewidth{10cm}
+  \newcommand*\signaturelineheight{.4pt}
+  \newcommand*\signaturedashleaderatom{\kern .1pt.\kern .1pt}
+  \newcommand*\signaturelineraise{.4ex}
+  \newcommand*\signaturelabelindent{0.3cm}
+  \newcommand*\signaturetextindent{}
+  \NewDocumentCommand\signatureline{
+    O{\signaturelinewidth}      % line width
+    O{\signaturelabelindent}    % label margin
+    O{%                           text indentation
+      \ifx\@empty\signaturetextindent
+        .5\dimexpr #2\relax
+      \else
+        \signaturetextindent
+      \fi
+    }
+    m                           % label
+    O{\signaturelineheight}     % line height
+    O{\signaturelineraise}      % line raise
+    D||{}                       % text
+  }{%
+    \parbox[t]{#1}{%
+      \leftskip #3%
+      \mbox{\strut #7}%
+      \vskip -#6%
+      \hrule height #5%
+      \vskip #6%
+      \scriptsize
+      \leftskip #2%
+      \rightskip #2%
+      \strut #4%
+    }%
+  }
+  \NewDocumentCommand\signaturedash{
+    O{\signaturelinewidth}      % line width
+    O{\signaturelabelindent}    % label margin
+    O{%                           text indentation
+      \ifx\@empty\signaturetextindent
+        .5\dimexpr #2\relax
+      \else
+        \signaturetextindent
+      \fi
+    }
+    m                           % label
+    O{\signaturedashleaderatom} % leader atom
+    O{\signaturelineraise}      % line raise
+    D||{}                       % text
+  }{%
+    \parbox[t]{#1}{%
+      \leftskip #3%
+      \mbox{\strut #7}%
+      \vskip -#6%
+      \leftskip 0pt%
+      \hrule height 0pt%
+      \leavevmode\cleaders\hbox{#5}\hfill\kern 0pt%
+      \hrule height 0pt%
+      \vskip #6%
+      \scriptsize
+      \leftskip #2%
+      \rightskip #2%
+      \strut #4%
+    }%
+  }
+\makeatother
+
+\makeatletter
+
+\hspace{1cm}
+
+\signatureline[6cm]{City, Date}|Wuppertal, \today|
+\signatureline[4cm]{Sebastian Puglisi} | \includegraphics{Sign_nobg.jpg} |
+
+\endgroup

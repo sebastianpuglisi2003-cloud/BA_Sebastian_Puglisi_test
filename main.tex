@@ -1,0 +1,160 @@
+\documentclass[
+paper=a4,
+11pt,
+twoside=off,
+bibliography=totoc,
+listof=totoc,
+appendixprefix,
+headings=small,
+headings=onelineappendix,
+numbers=noenddot]{scrbook} 
+% 'twoside=on' für Druckversion oder 'twoside=off' für Onlineversion
+
+% ----------------------------------------------------------------------
+% PACKAGES
+% ----------------------------------------------------------------------
+% EDGES
+\usepackage[
+paper=a4paper,
+left=15mm,
+right=25mm,
+top=25mm,
+bottom=25mm,
+bindingoffset=10mm]{geometry}
+\usepackage{scrhack}
+% ----------------------------------------------------------------------
+% STYLE
+\usepackage{lmodern}
+\renewcommand*\familydefault{\sfdefault} % base font is to be sans serif
+\usepackage{microtype} % für die Mikrotypografie (besseres Schriftbild)
+
+\usepackage[LGR, T1]{fontenc} %greek and latin
+\usepackage[utf8]{inputenc}
+
+\usepackage[greek,english]{babel}
+\usepackage{textgreek}
+
+\usepackage{setspace}
+\onehalfspacing
+% ----------------------------------------------------------------------
+% FIGURES
+\usepackage{graphicx}
+\usepackage[labelfont=bf]{caption} %makes Start of Figure bold
+\graphicspath{ {./thesis-pic} }
+\counterwithout{figure}{chapter}
+\captionsetup{format=plain}
+
+% ----------------------------------------------------------------------
+% TABLES
+\usepackage{cellspace}
+\usepackage{longtable}
+%table environment that continues on multiple pages
+\usepackage[para]{threeparttable} 
+%tables with footnotes, just put that enviornment after table but before tabular
+\usepackage{multicol}				
+\usepackage{multirow}
+%rows/columns spanding across multiple cells
+\usepackage{chngcntr} 
+\counterwithout{table}{chapter}
+%continous labeling of tables across chapters
+\usepackage[table, dvipsnames]{xcolor}
+\usepackage{colortbl}  %for longtable
+%coloring cells
+\usepackage{arydshln}
+\usepackage{float}
+
+\setlength{\tabcolsep}{9pt} %gap between text and border
+\renewcommand{\arraystretch}{1.15} %height of cells
+\setlength{\arrayrulewidth}{1pt} %border width
+\newcolumntype{Y}[1]{>{\centering\arraybackslash}m{#1}} 
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+\newcommand{\SetRowColor}[1]{\noalign{\gdef\RowColorName{#1}}\rowcolor{\RowColorName}}
+\definecolor{mygray}{rgb}{0.8, 0.8, 0.9}
+\definecolor{darkgray}{rgb}{0.25, 0.25, 0.35}
+
+\captionsetup{labelfont={color=darkgray, bf},font={color=darkgray}}
+
+% ----------------------------------------------------------------------
+% CITATION
+\usepackage[hidelinks]{hyperref} % für Hyperlinks in PDF-Dokumenten
+\usepackage{csquotes}%??
+\usepackage[style=apa,sortcites=true,sorting=nyt,backend=biber]{biblatex}
+
+\renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\ifnumgreater{\value{liststop}}{1}
+       {\finalandcomma}
+       {}%
+     \andothersdelim\bibstring[\emph]{andothers}}
+    {}}
+
+\addbibresource{./Supplementary/references.bib}
+% ----------------------------------------------------------------------
+% GLOSSARY/ACRONYM
+\usepackage[toc, nomain, acronym, nonumberlist, nopostdot, xindy, sanitizesort=true,  style=mcolindex, stylemods=mcols]{glossaries-extra}
+
+\makeglossaries
+\setabbreviationstyle[acronym]{long-short}
+\input{Supplementary/C_acronym}
+% ----------------------------------------------------------------------
+% More fun packages
+\usepackage{xparse} %for signature
+\usepackage{stix} %for triangles
+\usepackage{parskip} % NOT RECOMMENDED BUT NO BETTER ALTERNATIVE
+\usepackage{cleveref} %referecing multiple labels within one call
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }%makes supplementary nicer
+
+
+
+\begin{document}
+
+    \input{Chapters/0_Title}
+
+    \pagenumbering{Roman}
+    \include{Chapters/1_Summary}
+   
+    \tableofcontents
+    
+    \pagebreak
+    
+    \pagenumbering{arabic}
+    \begingroup
+        \let\clearpage\relax
+        \input{Chapters/2_Introduction}
+    
+        \chapter{Materials and Methods}
+            \input{Chapters/3.1_Materials.tex}
+            \input{Chapters/3.2_Methods}
+   
+        \input{Chapters/4_Results}
+        \input{Chapters/5_Discussion}
+     \endgroup
+
+     
+    \begingroup
+        \let\clearpage\relax
+        \printbibliography[heading=bibintoc, title={References}]
+    \endgroup
+    
+    \backmatter	
+        \input{Supplementary/B_Attachments}
+        \begingroup
+            \let\clearpage\relax
+            \glsaddall
+            \printglossary[title=List of Abbreviations, type=\acronymtype, numberedsection=autolabel]
+        \endgroup    
+        \input{Supplementary/D_Acknowledgment}
+        \input{Supplementary/E_Statutory_Declaration}
+	
+\end{document}
